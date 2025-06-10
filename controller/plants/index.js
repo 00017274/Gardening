@@ -13,3 +13,13 @@ exports.postAdd = (req, res) => {
   plantService.create(req.body);
   res.redirect('/plants');
 };
+
+exports.getEdit = (req, res) => {
+  const plant = plantService.getById(req.params.id);
+  res.render('form', { plant, action: `/plants/${req.params.id}/edit` });
+};
+
+exports.postEdit = (req, res) => {
+  plantService.update(req.params.id, req.body);
+  res.redirect('/plants');
+};

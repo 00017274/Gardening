@@ -8,4 +8,4 @@ block content
     each plant in plants
       li
         | #{plant.plantType} - #{plant.variety} (#{plant.plantingDate}, #{plant.location})
-       
+        a(href=`/plants/${plant.id}/edit`) Edit
