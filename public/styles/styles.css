@@ -1,0 +1,101 @@
+:root {
+  --background: #f5f7fa;
+  --card-bg: #ffffff;
+  --primary: #2c3e50;
+  --accent: #16a085;
+  --border: #dcdfe3;
+  --text: #333;
+  --muted: #7f8c8d;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--background);
+  color: var(--text);
+  padding: 2rem;
+  line-height: 1.6;
+}
+
+h1,
+h2 {
+  color: var(--primary);
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  background-color: var(--card-bg);
+  padding: 1rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  margin-bottom: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+form {
+  background-color: var(--card-bg);
+  padding: 1rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  max-width: 500px;
+}
+
+label {
+  display: block;
+  margin-top: 1rem;
+  font-weight: 500;
+}
+
+input[type="text"],
+input[type="date"],
+button {
+  width: 100%;
+  padding: 0.5rem;
+  margin-top: 0.5rem;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+button {
+  background-color: var(--accent);
+  color: white;
+  border: none;
+  cursor: pointer;
+  margin-top: 1.5rem;
+}
+
+button:hover {
+  background-color: #13856f;
+}
+
+@media (max-width: 600px) {
+  body {
+    padding: 1rem;
+  }
+
+  li {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  li a,
+  li form {
+    margin-top: 0.5rem;
+  }
+}

@@ -39,4 +39,7 @@ router.post('/:id/edit', validatePlant, (req, res) => {
   controller.postEdit(req, res);
 });
 
+//delete
+router.post('/:id/delete', controller.postDelete);
+
 module.exports = router;

@@ -3,7 +3,7 @@ const plantService = require('../../services');
 exports.list = (req, res) => {
   const plants = plantService.getAll();
   res.render('plants', { plants });
-};    
+};
 
 exports.getAdd = (req, res) => {
   res.render('form', { plant: {}, action: '/plants/add' });
@@ -21,5 +21,10 @@ exports.getEdit = (req, res) => {
 
 exports.postEdit = (req, res) => {
   plantService.update(req.params.id, req.body);
+  res.redirect('/plants');
+};
+
+exports.postDelete = (req, res) => {
+  plantService.remove(req.params.id);
   res.redirect('/plants');
 };
