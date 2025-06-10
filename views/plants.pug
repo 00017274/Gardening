@@ -1,0 +1,11 @@
+extends nav
+
+block content
+  p(style="font-size: 0.9em; color: gray;") This web application was created to fulfill Web Technology module’s requirements and does not represent an actual company or service.
+
+  a(href='/plants/add') Add New Plant
+  ul
+    each plant in plants
+      li
+        | #{plant.plantType} - #{plant.variety} (#{plant.plantingDate}, #{plant.location})
+       

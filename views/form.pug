@@ -1,0 +1,28 @@
+extends nav 
+
+block content
+
+
+  form(method='post', action=action)
+    label(for='plantType') Plant Type:
+    input(type='text', name='plantType', value=plant.plantType)
+    br
+
+    label(for='variety') Variety:
+    input(type='text', name='variety', value=plant.variety)
+    br
+
+    label(for='plantingDate') Planting Date:
+    input(type='date', name='plantingDate', value=plant.plantingDate)
+    br
+
+    label(for='location') Location:
+    input(type='text', name='location', value=plant.location)
+    br
+
+    if errors
+      ul(style='color: red')
+        each error in errors
+          li= error.msg
+
+    button(type='submit') Save
